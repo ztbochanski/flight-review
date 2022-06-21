@@ -5,6 +5,12 @@ module.exports = {
     author: `@zachbochanski`,
     siteUrl: `https://netlify.com/`,
     instagramUsername: "zachbochanski",
+    menuLinks: [
+      {
+        name: `home`,
+        link: `/`
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-sass`,
