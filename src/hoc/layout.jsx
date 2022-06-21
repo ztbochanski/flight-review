@@ -6,11 +6,33 @@ import { faPlane, faThumbsUp, faInfo } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 const Header = ({ siteTitle }) => (
-  <header>
-    <Link to="/">
-      {siteTitle}
-    </Link>
-  </header>
+  <nav className="navbar">
+      
+      <div className="navbar-brand">
+        <div className="navbar-item">
+          <Link to="/" className="title">{siteTitle}</Link>
+        </div>
+      </div>
+      
+      <div className="navbar-menu">
+
+        <div className="navbar-end">
+
+          <div className="navbar-item">
+            <Link to="/">
+              <button className="button is-medium">
+                <span className="icon has-text-info">
+                  <FontAwesomeIcon className="" icon={faInfo} size="lg" />
+                </span>
+                <span>About</span>
+              </button>
+            </Link>
+          </div>
+
+        </div>
+      </div>
+
+    </nav>
 )
 
 const Footer = ({ siteTitle }) => (
@@ -82,7 +104,7 @@ const Layout = ({ children }) => {
     }
   `)
 
-  return (
+  return(
     <div>
       <Header siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
       {children}
