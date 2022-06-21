@@ -70,7 +70,7 @@ const Footer = ({ siteTitle }) => (
             Home
           </p>
           </Link>
-          <Link to="/about">
+          <Link to="/">
           <p className="subtitle">
             <span className="mr-2 mt-2 icon has-text-info">
               <FontAwesomeIcon className="" icon={faInfo} size="lg" />
