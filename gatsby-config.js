@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Flight Review Blog`,
+    title: `Flight Review`,
     description: `Kick off studying for your next check ride or flight review`,
     author: `@zachbochanski`,
     siteUrl: `https://netlify.com/`,
