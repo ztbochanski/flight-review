@@ -10,7 +10,9 @@
 
 ## 🔧 Status
 
-**Build Status:** [![Netlify Status](https://api.netlify.com/api/v1/badges/e0d543d4-4ff2-4e64-b215-98a1d2891a52/deploy-status)](https://app.netlify.com/sites/forkin-hungry/deploys)
+- **Build Status:** [![Netlify Status](https://api.netlify.com/api/v1/badges/e0d543d4-4ff2-4e64-b215-98a1d2891a52/deploy-status)](https://app.netlify.com/sites/forkin-hungry/deploys)
+- [ ] Add testing suite status
+- [ ] Add CI
 
 ## 💡 Concepts
 
