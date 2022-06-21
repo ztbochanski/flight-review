@@ -103,7 +103,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   return(
     <div>
       <Header siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
