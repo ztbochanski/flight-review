@@ -4,8 +4,11 @@ module.exports = {
     description: `Kick off studying for your next check ride or flight review`,
     author: `@zachbochanski`,
     siteUrl: `https://netlify.com/`,
+    instagramUsername: "zachbochanski",
+    image: "/src/images/favicon.ico",
   },
   plugins: [
+    "gatsby-plugin-sass",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
