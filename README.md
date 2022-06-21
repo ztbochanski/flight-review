@@ -50,12 +50,12 @@ A repo of aviation information to help with review and studying.
 
 ## 🎓 Resources
 
-**Architecture**
+### **Architecture**
 - [JAMstack](https://jamstack.org/what-is-jamstack/)
-**JS libraries**
+### **JS libraries**
 - [Gatsby](https://www.gatsbyjs.com/)
 - [React](https://reactjs.org/)
-**Content management & hosting**
+### **Content management & hosting**
 - [Netlify](https://www.netlify.com)
-**Styling**
+### **Styling**
 - [Bulma](https://bulma.io/)
