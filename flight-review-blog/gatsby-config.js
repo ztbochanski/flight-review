@@ -5,7 +5,6 @@ module.exports = {
     author: `@zachbochanski`,
     siteUrl: `https://netlify.com/`,
     instagramUsername: "zachbochanski",
-    image: "/src/images/favicon.ico",
   },
   plugins: [
     `gatsby-plugin-sass`,
