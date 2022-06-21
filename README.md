@@ -1,4 +1,3 @@
-# flight-review
 
 <p align="center">
   <a href="https://flight-review.netlify.app">
