@@ -5,22 +5,6 @@ module.exports = {
     author: `@zachbochanski`,
     siteUrl: `https://netlify.com/`,
     instagramUsername: "zachbochanski",
-    menuLinks: [
-      {
-        name: `Home`,
-        link: `/`,
-        subMenu: [
-          {
-            name: `Sub1`,
-            link: `/`
-          },
-          {
-            name: `Sub2`,
-            link: `/`
-          }
-        ]
-      },
-    ],
   },
   plugins: [
     {
@@ -61,6 +45,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     `gatsby-transformer-sharp`,
