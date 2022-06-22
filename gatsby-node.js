@@ -1,14 +1,35 @@
 const replacePath = require("./gatsby/utils.js")
+const path = require("path")
 
-// exports.createPages = async ({ actions }) => {
-//   const { createPage } = actions
-//   createPage({
-//     path: "/content",
-//     component: require.resolve("./src/templates/content.js"),
-//     context: {},
-//     defer: true,
-//   })
-// }
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const Template = path.resolve(`src/templates/content.jsx`)
+
+  return graphql(`
+  {
+    allMdx {
+      edges {
+        node {
+          id
+          slug
+        }
+      }
+    }
+  }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+    result.data.allMdx.edges.forEach(({ node }) => {
+      createPage({
+        path: replacePath(node.slug),
+        component: Template,
+        context: { id: node.id },
+      })
+    })
+  })
+}
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
