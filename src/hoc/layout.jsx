@@ -5,22 +5,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlane, faThumbsUp, faInfo } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ menuLinks, siteTitle }) => (
   <nav className="navbar">
       
       <div className="navbar-brand">
         <div className="navbar-item">
-          <Link to="/" className="title">{siteTitle}</Link>
+          <Link to="/" className="title">{siteTitle} 💺</Link>
         </div>
       </div>
       
       <div className="navbar-menu">
 
         <div className="navbar-end">
+          <div className="navbar-item">
+            <Link to="/">
+              <button className="button">
+                <span className="icon has-text-warning">
+                  <FontAwesomeIcon className="" icon={faThumbsUp} size="lg" />
+                </span>
+                <span>Sponsor ad-less</span>
+              </button>
+            </Link>
+          </div>
 
           <div className="navbar-item">
             <Link to="/">
-              <button className="button is-medium">
+              <button className="button">
                 <span className="icon has-text-info">
                   <FontAwesomeIcon className="" icon={faInfo} size="lg" />
                 </span>
@@ -28,7 +38,6 @@ const Header = ({ siteTitle }) => (
               </button>
             </Link>
           </div>
-
         </div>
       </div>
 
@@ -40,7 +49,7 @@ const Footer = ({ siteTitle }) => (
     <div className="container">
       
       <div className="columns">
-        <div className="column is-4">
+        <div className="column is-one-quarter mr-4">
           <h4 className="mb-3 is-size-4 has-text-weight-light has-text-grey"><span className="has-text-weight-medium">{siteTitle}</span> an aviation knowledge blog.</h4>
           <p className="has-text-grey">
             This work is licensed under <a rel="license" href="/">
@@ -48,18 +57,21 @@ const Footer = ({ siteTitle }) => (
           </p>
           <p>{new Date().getFullYear()}</p>
         </div>
-        <div className="column is-4">
+        <div className="column is-one-quarter mr-4">
           <h4 className="mb-3 is-size-4 has-text-weight-light has-text-grey"><span className="has-text-weight-medium">Contribute</span> on GitHub</h4>
           <p className="mb-2">
-            <button className="button is-large" href="https://github.com/ztbochanski/flight-review/issues" target="_blank">
-              <span className="icon is-medium">
+            <button className="button" href="https://github.com/ztbochanski/flight-review/issues" target="_blank">
+              <span className="icon is-large">
                 <FontAwesomeIcon icon={faGithub} />
               </span>
               <span>Submit an issue</span>
             </button>
           </p>
         </div>
-        <div className="column is-4">
+
+        <div className="column is-one-quarter mr-4"></div>
+
+        <div className="column">
           <h4 className="mb-3 is-size-4 has-text-weight-light has-text-grey"><span className="has-text-weight-medium">More</span></h4>
           
           <Link to="/">
@@ -99,13 +111,17 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
   `)
   return(
     <div>
-      <Header siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
+      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
       {children}
       <Footer siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
     </div>
