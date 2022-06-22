@@ -1,4 +1,4 @@
-const replacePath = require("./gatsby/utils.js")
+const replacePath = require("./config-utils.js")
 const path = require("path")
 
 exports.createPages = ({ actions, graphql }) => {
