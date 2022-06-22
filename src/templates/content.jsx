@@ -1,17 +1,16 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const Content = () => (
-  <Layout>
-    <Seo title="Content" />
+  <div>
+  <Seo title="Content" />
     <h1>
       Hello from a <b>Content page</b>
     </h1>
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  </div>
 )
 
 export default Content
