@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlane, faThumbsUp, faInfo } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-const Header = ({ menuLinks, siteTitle }) => (
+const Header = ({ siteTitle }) => (
   <nav className="navbar">
       
       <div className="navbar-brand">
@@ -105,6 +105,50 @@ const Footer = ({ siteTitle }) => (
   </footer>
 )
 
+const renderItem = (item) => {
+
+  if (item) {
+    return(
+      <li key={item.link}>
+        <Link to={item.link}>
+          <div>{item.name}</div>
+        </Link>
+
+        {item.subMenu && item.subMenu.length > 0 ? (
+          <ul>
+            {item.subMenu.map((subLink) => (
+              <li key={subLink.name}>
+                <Link to={subLink.link}>
+                  {subLink.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+      </li>
+    )
+  } else {
+    return null
+  }
+}
+
+const SideBar = ({ menuLinks }) => {
+
+  // const [isActive, setIsActive] = React.useState(false)
+
+  return(
+    <aside className="menu">
+      <p className="menu-label">
+        General
+      </p>
+      <ul className="menu-list">
+        {menuLinks.map((link) => renderItem(link))}
+      </ul>
+    </aside>
+  )
+}
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -114,6 +158,10 @@ const Layout = ({ children }) => {
           menuLinks {
             name
             link
+            subMenu {
+              name
+              link
+            }
           }
         }
       }
@@ -121,9 +169,10 @@ const Layout = ({ children }) => {
   `)
   return(
     <div>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
+      <Header siteTitle={data.site.siteMetadata.title || `Flying is Rad`} />
+      <SideBar menuLinks={data.site.siteMetadata.menuLinks} />
       {children}
-      <Footer siteTitle={data.site.siteMetadata?.title || `Flying is Rad`} />
+      <Footer siteTitle={data.site.siteMetadata.title || `Flying is Rad`} />
     </div>
   )
 }
