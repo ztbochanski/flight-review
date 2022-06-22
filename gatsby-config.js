@@ -7,8 +7,18 @@ module.exports = {
     instagramUsername: "zachbochanski",
     menuLinks: [
       {
-        name: `home`,
-        link: `/`
+        name: `Home`,
+        link: `/`,
+        subMenu: [
+          {
+            name: `Sub1`,
+            link: `/`
+          },
+          {
+            name: `Sub2`,
+            link: `/`
+          }
+        ]
       },
     ],
   },
