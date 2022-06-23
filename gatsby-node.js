@@ -1,5 +1,14 @@
 const path = require("path")
 
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions
+
+  if (page.path.match("/")) {
+    page.context.layout = "index"
+    createPage(page)
+  }
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
