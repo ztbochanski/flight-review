@@ -10,7 +10,7 @@ const Footer = ({ siteTitle }) => (
       
       <div className="columns">
         <div className="column is-one-quarter mr-4">
-          <h4 className="mb-3 is-size-4 has-text-weight-light has-text-grey"><span className="has-text-weight-medium">{siteTitle}</span> an aviation knowledge blog.</h4>
+          <h4 className="mb-3 is-size-4 has-text-weight-light has-text-grey"><span className="has-text-weight-medium">{siteTitle}</span> - aviation knowledge blog.</h4>
           <p className="has-text-grey">
             This work is licensed under <a rel="license" href="/">
             The BSD Zero Clause License</a> ✌️
