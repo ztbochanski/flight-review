@@ -10,7 +10,9 @@ export const useMarkdownNodes = () => {
             parent
             title
           }
-          slug
+          fields {
+            slug
+          }
         }
       }
     }
