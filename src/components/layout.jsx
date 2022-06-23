@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <div>
       <Header siteTitle={title || `Flying is Rad`} />
       <div className="columns">
-        <div className="column is-3">
+        <div className="column is-narrow" style={{borderRight: "1px solid lightgrey"}}>
           <SideBar />
         </div>
         <div className="column">
