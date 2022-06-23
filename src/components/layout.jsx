@@ -9,8 +9,17 @@ const Layout = ({ children }) => {
   return(
     <div>
       <Header siteTitle={title || `Flying is Rad`} />
-      <SideBar />
-      {children}
+      <div className="columns">
+        <div className="column is-3">
+          <SideBar />
+        </div>
+        <div className="column">
+          <div className="section">
+            <div className="container">{children}</div>
+          </div>
+        </div>
+        
+      </div>
       <Footer siteTitle={title || `Flying is Rad`} />
     </div>
   )
