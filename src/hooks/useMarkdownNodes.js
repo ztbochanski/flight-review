@@ -7,6 +7,7 @@ export const useMarkdownNodes = () => {
         nodes {
           id
           frontmatter {
+            parent
             title
           }
           slug
