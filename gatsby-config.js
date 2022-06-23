@@ -1,4 +1,5 @@
 module.exports = {
+  // trailingSlash: "always",
   siteMetadata: {
     title: `Flight Review`,
     description: `Kick off studying for your next check ride or flight review`,

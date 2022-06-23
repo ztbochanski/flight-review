@@ -1,4 +1,3 @@
-const replacePath = require("./config-utils.js")
 const path = require("path")
 
 exports.createPages = ({ actions, graphql }) => {
@@ -23,7 +22,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     result.data.allMdx.edges.forEach(({ node }) => {
       createPage({
-        path: replacePath(node.slug),
+        path: node.slug,
         component: Template,
         context: { id: node.id },
       })
@@ -39,14 +38,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: replacePath(slug),
+      value: slug,
     })
   } else if (node.internal.type === "Mdx") {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: 'slug',
       node,
-      value: replacePath(value),
+      value: value,
     })
   }
 }
