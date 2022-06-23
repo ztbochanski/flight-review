@@ -8,7 +8,7 @@ const SideBar = () => {
   const  menuItems = tree(nodes)
   
   return(
-    <div className="block m-5">
+    <div className="block p-2 m-2">
       <aside className="menu">
         {menuItems.map((item, key) => (
           <div key={key}>
@@ -16,7 +16,7 @@ const SideBar = () => {
             <ul className="menu-list">
               {item.items.map(link => (
                 <div key={link.id}>
-                  <li><Link to={link.slug}>{link.name}</Link></li>
+                  <li><Link activeClassName="is-active" to={link.slug}>{link.name}</Link></li>
                 </div>
               ))}
             </ul>
@@ -41,7 +41,7 @@ const tree = (nodes) => {
   ))
   
   nodes.forEach(node => {
-    const slug = node.slug
+    const slug = node.fields.slug
     const id = node.id
     const title = node.frontmatter.title
     const parent = node.frontmatter.parent
