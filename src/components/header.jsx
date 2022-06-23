@@ -3,12 +3,13 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faThumbsUp, faInfo } from "@fortawesome/free-solid-svg-icons"
 
-const Header = ({ siteTitle }) => (
-  <nav className="navbar">
+const Header = ({ siteTitle, color }) => (
+  <nav className={`navbar ${color}`}>
       
       <div className="navbar-brand">
+        <div className="navbar-item"><span className="title">💺</span></div>
         <div className="navbar-item">
-          <Link to="/" className="title">{siteTitle} 💺</Link>
+          <Link to="/" className="title">{siteTitle}</Link>
         </div>
       </div>
       
