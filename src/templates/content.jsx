@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Seo from "../components/seo"
 
 const Content = ({ data: { mdx } }) => (
-  <div>
+  <div className="content">
     <Seo title="Content" />
     <h1>
       Hello from a <b>Content page</b>
