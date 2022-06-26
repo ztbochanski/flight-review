@@ -13,7 +13,7 @@ const IndexPage = () => (
           <h1 className="title is-size-2 is-size-3-mobile">
             💺
           </h1>
-          <Link className="button is-large" to={"/private/MDX"}>Get Started</Link>
+          <Link className="button is-large" to={"/private/introduction"}>Get Started</Link>
         </div>
       </div>
       
