@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPlane, faThumbsUp, faInfo } from "@fortawesome/free-solid-svg-icons"
+import { faPlane, faInfo } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = ({ siteTitle }) => (
@@ -20,12 +20,12 @@ const Footer = ({ siteTitle }) => (
         <div className="column is-one-quarter mr-4">
           <h4 className="mb-3 is-size-4 has-text-weight-light has-text-grey"><span className="has-text-weight-medium">Contribute</span> on GitHub</h4>
           <p className="mb-2">
-            <button className="button" href="https://github.com/ztbochanski/flight-review/issues" target="_blank">
+            <a className="button" rel="noreferrer" href="https://github.com/ztbochanski/flight-review/issues" target="_blank">
               <span className="icon is-large">
                 <FontAwesomeIcon icon={faGithub} />
               </span>
               <span>Submit an issue</span>
-            </button>
+            </a>
           </p>
         </div>
 
@@ -42,20 +42,13 @@ const Footer = ({ siteTitle }) => (
             Home
           </p>
           </Link>
+          
           <Link to="/">
           <p className="subtitle">
             <span className="mr-2 mt-2 icon has-text-info">
               <FontAwesomeIcon className="" icon={faInfo} size="lg" />
             </span>
             About
-          </p>
-          </Link>
-          <Link to="/">
-          <p className="subtitle">
-            <span className="mr-2 mt-2 icon has-text-warning">
-              <FontAwesomeIcon className="" icon={faThumbsUp} size="lg" />
-            </span>
-            Sponsor ad-less
           </p>
           </Link>
           
