@@ -8,7 +8,7 @@ const Content = ({ data: { mdx } }) => (
   <div className="content">
     <Seo title="Content" />
     <h1>
-      Hello from a <b>Content page</b>
+      {mdx.frontmatter.title}
     </h1>
     <MDXRenderer>{mdx.body}</MDXRenderer>
     <Link to="/">Go back to the homepage</Link>
