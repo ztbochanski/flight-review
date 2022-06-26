@@ -8,7 +8,6 @@ const IndexLayout = ({ children }) => {
   const { title } = useSiteMetadata()
   return(
     <div>
-      <Header color="is-white" siteTitle={title || `Flying is Rad`} />
       {children}
       <Footer siteTitle={title || `Flying is Rad`} />
     </div>
@@ -38,7 +37,6 @@ const RegularLayout = ({ children }) => {
 
 
 const Layout = ({ children, pageContext }) => {
-  console.log(pageContext.layout);
   if (pageContext.layout === "index") {
     return <IndexLayout children={children}></IndexLayout>
   }
