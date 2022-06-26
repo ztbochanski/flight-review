@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faThumbsUp, faInfo } from "@fortawesome/free-solid-svg-icons"
+import { faInfo } from "@fortawesome/free-solid-svg-icons"
 
 const Header = ({ siteTitle, color }) => (
   <nav className={`navbar ${color}`}>
@@ -16,16 +16,6 @@ const Header = ({ siteTitle, color }) => (
       <div className="navbar-menu">
 
         <div className="navbar-end">
-          <div className="navbar-item">
-            <Link to="/">
-              <button className="button">
-                <span className="icon has-text-warning">
-                  <FontAwesomeIcon className="" icon={faThumbsUp} size="lg" />
-                </span>
-                <span>Sponsor ad-less</span>
-              </button>
-            </Link>
-          </div>
 
           <div className="navbar-item">
             <Link to="/">
@@ -37,6 +27,7 @@ const Header = ({ siteTitle, color }) => (
               </button>
             </Link>
           </div>
+
         </div>
       </div>
 
