@@ -1,68 +1,17 @@
 {
-  "name": "flight-review-blog",
-  "private": true,
-  "description": "A clean blog displaying aviation knowledge",
-  "version": "0.1.0",
-  "author": "Zach Bochanski <ztbochanski@gmail.com>",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "bulma": "^0.9.4",
-    "gatsby": "^4.16.0",
-    "gatsby-plugin-image": "^2.16.1",
-    "gatsby-plugin-layout": "^3.17.0",
-    "gatsby-plugin-manifest": "^4.16.0",
-    "gatsby-plugin-mdx": "^3.17.0",
-    "gatsby-plugin-offline": "^5.16.0",
-    "gatsby-plugin-react-helmet": "^5.16.0",
-    "gatsby-plugin-sass": "^5.16.0",
-    "gatsby-plugin-sharp": "^4.17.0",
-    "gatsby-remark-autolink-headers": "^5.17.0",
-    "gatsby-remark-images": "^6.17.0",
-    "gatsby-remark-prismjs": "^6.17.0",
-    "gatsby-source-filesystem": "^4.16.0",
-    "gatsby-transformer-remark": "^5.17.0",
-    "gatsby-transformer-sharp": "^4.16.0",
-    "prismjs": "^1.28.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.52.3"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "babel-jest": "^28.1.1",
-    "babel-preset-gatsby": "^2.17.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^28.1.1",
-    "jest-environment-jsdom": "^28.1.1",
-    "prettier": "^2.6.2",
-    "react-test-renderer": "^18.2.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
+  "name": "flight-review",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ztbochanski/flight-review"
-  },
-  "bugs": {
-    "url": "https://github.com/ztbochanski/flight-review/issues"
+  "dependencies": {
+    "@astrojs/starlight": "^0.5.5",
+    "astro": "^2.8.5",
+    "sharp": "^0.32.3"
   }
 }
